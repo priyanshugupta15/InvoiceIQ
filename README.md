@@ -1,7 +1,4 @@
 # 🧾 InvoiceIQ
-[![InvoiceIQ CI](https://github.com/Harsimar-Sahota/InvoiceIQ/actions/workflows/ci.yml/badge.svg)](https://github.com/Harsimar-Sahota/InvoiceIQ/actions/workflows/ci.yml)
-
-### AI-Powered Invoice Generator & Finance Assistant (MERN + Gemini AI)
 
 **InvoiceIQ** is a production-ready, full-stack SaaS app for automating invoicing and basic finance workflows.
 
@@ -12,42 +9,28 @@ It turns plain text (emails, chats, notes) into structured invoices, sends AI-ge
 -  Built with the **MERN stack** (MongoDB, Express, React, Node)
 -  **AI features** using Google Gemini (`@google/generative-ai`)
 -  **JWT authentication** + protected routes
--  **Dockerized** with `docker-compose`
--  **CI/CD** via GitHub Actions
--  **Unit tests** with Jest
----
 
-## 🌐 Live Demo
 
-🔗 **Local Development:** Run locally on your machine
-🔐 **Test Credentials:**
 
-```
-email: Demo@InvoiceIQ.com
-password: Demopass12$
-```
-
-🎥 **90-Second Demo Video:** *[Add your Loom or YouTube link]*
-> Note: This project is actively maintained and open to future enhancements.
 
 ---
 
 ## 🖼️ Screenshots
 
 ###  Dashboard Overview
-![Dashboard](./screenshots/dashboard.png)
+![Dashboard](./screenshots/dashboard1.png)
 
 ###  Create Invoice
-![Create Invoice](./screenshots/create-invoice.png)
+![Create Invoice](./screenshots/createinvoiceai.png)
 
 ###  AI-Generated Invoice
-![AI Invoice](./screenshots/ai-generated.png)
+![AI Invoice](./screenshots/aigeneratedinvoice.png)
 
 ###  AI Payment Reminder Email
-![Payment Reminder](./screenshots/reminder-email.png)
+![Payment Reminder](./screenshots/reminder.png)
 
 ###  Profile Settings
-![Profile Settings](./screenshots/profile-settings.png)
+![Profile Settings](./screenshots/profile.png)
 
 ---
 
@@ -235,94 +218,6 @@ Visit locally:
 
 ---
 
-## 🐳 Docker Setup
-
-To run everything locally with Docker:
-
-docker-compose up --build
-
-
-The stack exposes:
-
-Frontend → http://localhost:5173
-
-Backend API → http://localhost:8000/api
-
-Make sure the ports in docker-compose.yml match these values.
----
-
-## ## 🔄 Continuous Integration / Deployment (CI/CD)
-
-This project uses **GitHub Actions** to automate quality checks for local development and future deployments:
-
--  Run builds and **Jest tests** on every push and pull request
--  Build **Docker images** for consistent environments
--  Ready for deployment to **Vercel** (frontend) and **Render** (backend) when you're ready to deploy
--  Block merges if tests or builds fail
-
-CI status is displayed via the badge at the top of this README.
-
-
-##   Testing (Jest)
-
-InvoiceIQ uses **Jest** for unit testing.
-
-### 📋 Coverage
-
-* Auth API tests (login/signup)
-* AI generation tests (mocked Gemini API)
-* Invoice CRUD logic
-* Utility functions (date, parsing)
-
-Run tests:
-
-```bash
-cd backend
-npm run test
-```
-
-Optional:
-
-```bash
-npm run test:watch
-```
-
----
-
-## 📈 Local Development & Future Deployment
-
-The following strategies outline how InvoiceIQ can scale from local development to production deployment:
-
-| # | Strategy                                  | Purpose                |
-| - | ----------------------------------------- | ---------------------- |
-| 1 | Add **rate limiting** on AI endpoints     | Prevent API abuse      |
-| 2 | Use **Redis queues** for heavy AI tasks   | Handle concurrency     |
-| 3 | Implement **MongoDB indexing**            | Faster invoice queries |
-| 4 | Serve frontend via **CDN**                | Faster global load     |
-| 5 | Store files in **AWS S3**                 | Offload from server    |
-| 6 | Use **Redis caching** for dashboard stats | Improve performance    |
-
----
-
-## 🔐 Security Practices
-
-* JWT-based authentication
-* Password hashing (bcrypt)
-* Input validation (Zod/Joi)
-* Rate limiting on AI routes
-* CORS + Helmet middleware
-* Environment secrets via `.env`
-* No secrets committed to repo
-
----
-
-## 💡 Inspiration
-
-> Inspired by **Y Combinator’s RFS**: *Vertical SaaS & AI Tools for Small Businesses*
-
-This project aligns with Y Combinator’s mission of building AI tools that automate real business workflows.
-
----
 
 
 
