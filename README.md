@@ -19,7 +19,7 @@ It turns plain text (emails, chats, notes) into structured invoices, sends AI-ge
 
 ## 🌐 Live Demo
 
-🔗 **App URL:** **[https://www.invoiceiq.app](https://www.invoiceiq.app)**
+🔗 **Local Development:** Run locally on your machine
 🔐 **Test Credentials:**
 
 ```
@@ -214,7 +214,7 @@ GEMINI_MODEL=models/gemini-2.5-flash
 PORT=8000
 ```
 
-Run backend:
+Run backend locally:
 
 ```bash
 npm run dev
@@ -230,14 +230,14 @@ npm install
 npm run dev
 ```
 
-Visit:
+Visit locally:
 👉 [http://localhost:5173](http://localhost:5173)
 
 ---
 
 ## 🐳 Docker Setup
 
-To run everything with Docker:
+To run everything locally with Docker:
 
 docker-compose up --build
 
@@ -253,12 +253,12 @@ Make sure the ports in docker-compose.yml match these values.
 
 ## ## 🔄 Continuous Integration / Deployment (CI/CD)
 
-This project uses **GitHub Actions** to automate quality checks and deployments:
+This project uses **GitHub Actions** to automate quality checks for local development and future deployments:
 
--  Run builds and **Jest tests** on every push and pull request  
--  Build **Docker images** for consistent environments  
--  Deploy the frontend to **Vercel** and backend to **Render**  
--  Block merges if tests or builds fail  
+-  Run builds and **Jest tests** on every push and pull request
+-  Build **Docker images** for consistent environments
+-  Ready for deployment to **Vercel** (frontend) and **Render** (backend) when you're ready to deploy
+-  Block merges if tests or builds fail
 
 CI status is displayed via the badge at the top of this README.
 
@@ -289,9 +289,9 @@ npm run test:watch
 
 ---
 
-## 📈 Scaling Plan
+## 📈 Local Development & Future Deployment
 
-The following strategies outline how InvoiceIQ can scale as user traffic and AI usage grow:
+The following strategies outline how InvoiceIQ can scale from local development to production deployment:
 
 | # | Strategy                                  | Purpose                |
 | - | ----------------------------------------- | ---------------------- |
@@ -324,15 +324,7 @@ This project aligns with Y Combinator’s mission of building AI tools that auto
 
 ---
 
-## 👨‍💻 Author
 
-**Harsimar Preet Singh Sahota**
-Full Stack Developer — MERN + AI
-
-🌐 [GitHub](https://github.com/Harsimar-Sahota)
-💼 [LinkedIn](https://linkedin.com/in/Harsimar-Sahota)
-
----
 
 ## 🪪 License
 
