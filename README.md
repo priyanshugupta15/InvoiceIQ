@@ -174,7 +174,7 @@ InvoiceIQ/
 ### 🧩 Clone Repository
 
 ```bash
-git clone https://github.com/Harsimar-Sahota/InvoiceIQ.git
+git clone https://github.com/priyanshugupta15/InvoiceIQ
 cd InvoiceIQ
 ```
 
