@@ -1,8 +1,9 @@
 {
   "name": "invoiceiq",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "AI-powered invoice generation and management frontend built with React and Vite",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
