@@ -4,11 +4,15 @@
 
 It turns plain text (emails, chats, notes) into structured invoices, sends AI-generated payment reminders, and shows revenue insights on a clean dashboard — all powered by **Google Gemini**.
 
+> **Note:** This project uses Google Gemini AI for intelligent invoice parsing and payment reminder generation.
+
 **Highlights**
 
 -  Built with the **MERN stack** (MongoDB, Express, React, Node)
 -  **AI features** using Google Gemini (`@google/generative-ai`)
 -  **JWT authentication** + protected routes
+-  **Responsive UI** with modern design
+-  **Email reminders** for unpaid invoices
 
 
 
@@ -61,17 +65,17 @@ Writing unit tests around core backend logic
 
 ## 🛠️ Tech Stack
 
-| Layer                  | Technology                         |
-| ---------------------- | ---------------------------------- |
-| **Frontend**           | React (Vite) + TailwindCSS + Axios |
-| **Backend**            | Node.js + Express.js               |
-| **Database**           | MongoDB Atlas                      |
-| **AI Engine**          | Google Gemini API (@google/genai)  |
-| **Authentication**     | JWT + bcryptjs                     |
-| **Containerization**   | Docker                             |
-| **CI/CD**              | GitHub Actions                     |
-| **Testing**            | Jest                               |
-| **Environment Config** | dotenv                             |
+| Layer                  | Technology                                      |
+| ---------------------- | ----------------------------------------------- |
+| **Frontend**           | React 18 (Vite) + TailwindCSS + Axios           |
+| **Backend**            | Node.js + Express.js                            |
+| **Database**           | MongoDB Atlas (with Mongoose ODM)               |
+| **AI Engine**          | Google Gemini API (@google/genai)               |
+| **Authentication**     | JWT + bcryptjs                                  |
+| **Containerization**   | Docker + Docker Compose                         |
+| **CI/CD**              | GitHub Actions                                  |
+| **Testing**            | Jest + Supertest                                |
+| **Environment Config** | dotenv                                          |
 
 ---
 
