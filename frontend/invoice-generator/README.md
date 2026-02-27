@@ -1,3 +1,17 @@
+# InvoiceIQ Frontend
+
+InvoiceIQ is an AI-powered invoice generation and management application built with React 18 and Vite.
+
+## Features
+
+- 🧾 AI-powered invoice creation with Google Gemini
+- 📊 Interactive dashboard with revenue insights
+- 📧 Automated payment reminder generation
+- 🔐 Secure JWT authentication
+- 📱 Responsive design with TailwindCSS
+
+---
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
