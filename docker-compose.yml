@@ -1,3 +1,6 @@
+# InvoiceIQ Docker Compose Configuration
+# This file defines the multi-container setup for frontend and backend services
+
 services:
   backend:
     build: ./backend
@@ -9,6 +12,8 @@ services:
       - ./backend:/app
       - /app/node_modules
     restart: always
+    networks:
+      - invoiceiq-network
 
   frontend:
     build: ./frontend/invoice-generator
@@ -19,3 +24,10 @@ services:
     volumes:
       - ./frontend/invoice-generator:/app
       - /app/node_modules
+    restart: always
+    networks:
+      - invoiceiq-network
+
+networks:
+  invoiceiq-network:
+    driver: bridge
