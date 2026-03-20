@@ -1,0 +1,180 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#374151"/>
+    </marker>
+    <linearGradient id="vercelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0e7ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#c7d2fe;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="renderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fde68a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="mongoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d1fae5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#a7f3d0;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="geminiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fce7f3;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fbcfe8;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="emailGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#e0f2fe;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bae6fd;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#1f2937">InvoiceIQ - System Architecture</text>
+  
+  <!-- User Section -->
+  <g id="user">
+    <rect x="50" y="280" width="120" height="80" rx="8" fill="#f3f4f6" stroke="#6b7280" stroke-width="2"/>
+    <text x="110" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2937">👤 User</text>
+    <text x="110" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#374151">Web Browser</text>
+  </g>
+  
+  <!-- Vercel Frontend -->
+  <g id="vercel">
+    <rect x="250" y="80" width="280" height="280" rx="12" fill="url(#vercelGrad)" stroke="#4f46e5" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="390" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#4f46e5">⚡ Vercel (Frontend)</text>
+    
+    <!-- CDN -->
+    <rect x="280" y="130" width="220" height="60" rx="6" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+    <text x="390" y="160" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2937">Vercel CDN</text>
+    <text x="390" y="180" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">Global Edge Network</text>
+    
+    <!-- React App -->
+    <rect x="280" y="220" width="220" height="60" rx="6" fill="#ffffff" stroke="#4f46e5" stroke-width="2"/>
+    <text x="390" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2937">React SPA</text>
+    <text x="390" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">Vite + TailwindCSS</text>
+    
+    <!-- Arrow CDN to React -->
+    <line x1="390" y1="190" x2="390" y2="215" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- Render Backend -->
+  <g id="render">
+    <rect x="620" y="60" width="320" height="340" rx="12" fill="url(#renderGrad)" stroke="#d97706" stroke-width="2" stroke-dasharray="5,5"/>
+    <text x="780" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#d97706">🚀 Render (Backend)</text>
+    
+    <!-- Express API -->
+    <rect x="650" y="110" width="260" height="60" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <text x="780" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f2937">Express.js API</text>
+    <text x="780" y="155" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">Node.js + REST</text>
+    
+    <!-- JWT Auth -->
+    <rect x="650" y="190" width="120" height="50" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <text x="710" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f2937">JWT Auth</text>
+    
+    <!-- Controllers -->
+    <rect x="790" y="190" width="120" height="50" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <text x="850" y="215" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f2937">Controllers</text>
+    
+    <!-- Middleware -->
+    <rect x="650" y="260" width="260" height="50" rx="6" fill="#ffffff" stroke="#d97706" stroke-width="2"/>
+    <text x="780" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f2937">Middleware (CORS, Auth)</text>
+    
+    <!-- Arrow Express to Auth -->
+    <line x1="710" y1="170" x2="710" y2="185" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <!-- Arrow Express to Controllers -->
+    <line x1="850" y1="170" x2="850" y2="185" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <!-- Arrow Auth to Controllers -->
+    <line x1="770" y1="215" x2="785" y2="215" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  </g>
+  
+  <!-- MongoDB Atlas -->
+  <g id="mongodb">
+    <rect x="1000" y="80" width="160" height="140" rx="12" fill="url(#mongoGrad)" stroke="#059669" stroke-width="2"/>
+    <text x="1080" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#059669">🍃 MongoDB</text>
+    <text x="1080" y="135" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">Atlas</text>
+    
+    <ellipse cx="1080" cy="170" rx="50" ry="20" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <text x="1080" y="175" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1f2937">Users</text>
+    
+    <ellipse cx="1080" cy="205" rx="50" ry="20" fill="#ffffff" stroke="#059669" stroke-width="2"/>
+    <text x="1080" y="210" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#1f2937">Invoices</text>
+  </g>
+  
+  <!-- Google Gemini AI -->
+  <g id="gemini">
+    <rect x="1000" y="260" width="160" height="100" rx="12" fill="url(#geminiGrad)" stroke="#db2777" stroke-width="2"/>
+    <text x="1080" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#db2777">🤖 Gemini AI</text>
+    <text x="1080" y="315" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">Google GenAI</text>
+    <text x="1080" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">gemini-2.5-flash</text>
+  </g>
+  
+  <!-- Email Service -->
+  <g id="email">
+    <rect x="1000" y="400" width="160" height="80" rx="12" fill="url(#emailGrad)" stroke="#0284c7" stroke-width="2"/>
+    <text x="1080" y="430" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#0284c7">📧 Email</text>
+    <text x="1080" y="455" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#6b7280">SMTP / SendGrid</text>
+    <text x="1080" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">Payment Reminders</text>
+  </g>
+  
+  <!-- Connection Lines -->
+  <!-- User to Vercel CDN -->
+  <path d="M 170 320 L 275 320" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="220" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">HTTPS</text>
+  
+  <!-- Vercel React to Render Express -->
+  <path d="M 530 250 L 645 140" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="585" y="185" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#6b7280">API Requests</text>
+  
+  <!-- Render to MongoDB -->
+  <path d="M 940 140 L 995 140" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="965" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6b7280">CRUD</text>
+  
+  <!-- Render to Gemini -->
+  <path d="M 940 215 L 995 290" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="965" y="245" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6b7280">AI Parse</text>
+  
+  <!-- Render to Email -->
+  <path d="M 940 285 L 995 420" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+  <text x="965" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6b7280">Reminders</text>
+  
+  <!-- Gemini Response -->
+  <path d="M 1000 310 L 945 235" stroke="#374151" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+  <text x="965" y="265" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#6b7280">Response</text>
+  
+  <!-- Legend -->
+  <g id="legend">
+    <rect x="50" y="500" width="300" height="150" rx="8" fill="#f9fafb" stroke="#d1d5db" stroke-width="2"/>
+    <text x="200" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2937">Architecture Flow</text>
+    
+    <line x1="70" y1="555" x2="120" y2="555" stroke="#374151" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <text x="140" y="560" font-family="Arial, sans-serif" font-size="11" fill="#374151">Request Flow</text>
+    
+    <line x1="70" y1="585" x2="120" y2="585" stroke="#374151" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+    <text x="140" y="590" font-family="Arial, sans-serif" font-size="11" fill="#374151">Response Flow</text>
+    
+    <rect x="70" y="605" width="30" height="20" rx="4" fill="url(#vercelGrad)" stroke="#4f46e5" stroke-width="2"/>
+    <text x="110" y="620" font-family="Arial, sans-serif" font-size="11" fill="#374151">Vercel (Frontend)</text>
+    
+    <rect x="70" y="635" width="30" height="20" rx="4" fill="url(#renderGrad)" stroke="#d97706" stroke-width="2"/>
+    <text x="110" y="650" font-family="Arial, sans-serif" font-size="11" fill="#374151">Render (Backend)</text>
+    
+    <rect x="200" y="605" width="30" height="20" rx="4" fill="url(#mongoGrad)" stroke="#059669" stroke-width="2"/>
+    <text x="240" y="620" font-family="Arial, sans-serif" font-size="11" fill="#374151">MongoDB Atlas</text>
+    
+    <rect x="200" y="635" width="30" height="20" rx="4" fill="url(#geminiGrad)" stroke="#db2777" stroke-width="2"/>
+    <text x="240" y="650" font-family="Arial, sans-serif" font-size="11" fill="#374151">Google Gemini AI</text>
+  </g>
+  
+  <!-- Data Flow Steps -->
+  <g id="steps">
+    <rect x="400" y="500" width="750" height="150" rx="8" fill="#f9fafb" stroke="#d1d5db" stroke-width="2"/>
+    <text x="775" y="525" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1f2937">Request Flow</text>
+    
+    <text x="420" y="555" font-family="Arial, sans-serif" font-size="11" fill="#374151">1. User accesses Vercel-hosted frontend</text>
+    <text x="420" y="580" font-family="Arial, sans-serif" font-size="11" fill="#374151">2. React app loads via CDN</text>
+    <text x="420" y="605" font-family="Arial, sans-serif" font-size="11" fill="#374151">3. API requests sent to Render backend</text>
+    <text x="420" y="630" font-family="Arial, sans-serif" font-size="11" fill="#374151">4. Backend authenticates with JWT</text>
+    
+    <text x="780" y="555" font-family="Arial, sans-serif" font-size="11" fill="#374151">5. Data stored in MongoDB Atlas</text>
+    <text x="780" y="580" font-family="Arial, sans-serif" font-size="11" fill="#374151">6. AI requests processed by Gemini</text>
+    <text x="780" y="605" font-family="Arial, sans-serif" font-size="11" fill="#374151">7. Email reminders sent via SMTP</text>
+    <text x="780" y="630" font-family="Arial, sans-serif" font-size="11" fill="#374151">8. Response returned to client</text>
+  </g>
+</svg>

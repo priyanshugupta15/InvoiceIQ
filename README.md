@@ -57,9 +57,7 @@ Building a real SaaS-style app with authentication & dashboards
 
 Integrating a modern AI API into an existing backend
 
-Using Docker + CI/CD for repeatable deployments
 
-Writing unit tests around core backend logic
 
 ---
 
@@ -72,10 +70,9 @@ Writing unit tests around core backend logic
 | **Database**           | MongoDB Atlas (with Mongoose ODM)               |
 | **AI Engine**          | Google Gemini API (@google/genai)               |
 | **Authentication**     | JWT + bcryptjs                                  |
-| **Containerization**   | Docker + Docker Compose                         |
-| **CI/CD**              | GitHub Actions                                  |
 | **Testing**            | Jest + Supertest                                |
 | **Environment Config** | dotenv                                          |
+| **Hosting**            | Vercel (Frontend) + Render (Backend)            |
 
 ---
 
@@ -107,7 +104,17 @@ Writing unit tests around core backend logic
 
 ## 🏗️ Architecture Diagram
 
-![Architecture Diagram](./docs/architecture.png)
+![Architecture Diagram](./docs/architecture.svg)
+
+The architecture shows the complete data flow:
+
+1. **User** → Accesses the application via web browser
+2. **Vercel CDN** → Serves static React frontend globally
+3. **Render Backend** → Express.js API handles all business logic
+4. **MongoDB Atlas** → Stores user and invoice data
+5. **Google Gemini AI** → Processes AI-powered invoice generation
+6. **Email Service** → Sends payment reminder notifications
+
 ---
 
 ## 📂 Project Structure
@@ -165,7 +172,7 @@ InvoiceIQ/
 │   └── profile-settings.png
 │
 ├── docker-compose.yml
-├── .github/workflows/        # CI/CD pipelines
+├── .github/workflows/        # GitHub Actions (optional)
 ├── .env.example              # root example env, if used
 └── README.md
 
@@ -222,8 +229,46 @@ Visit locally:
 
 ---
 
+## 🚀 Deployment
 
+### 🌐 Live Demo
 
+- **Frontend (Vercel):** [https://invoiceiq.vercel.app](https://invoiceiq.vercel.app)
+- **Backend API (Render):** [https://invoiceiq-backend.onrender.com](https://invoiceiq-backend.onrender.com)
+
+### 📦 Deploy Frontend to Vercel
+
+1. Connect your GitHub repository to [Vercel](https://vercel.com)
+2. Set the **Root Directory** to `InvoiceIQ/frontend/invoice-generator`
+3. Build command: `npm run build`
+4. Output directory: `dist`
+5. Add environment variable:
+   ```env
+   VITE_API_BASE_URL=https://invoiceiq-backend.onrender.com
+   ```
+
+### 📦 Deploy Backend to Render
+
+1. Create a new **Web Service** on [Render](https://render.com)
+2. Connect your GitHub repository
+3. Set **Root Directory** to `InvoiceIQ/backend`
+4. Build command: `npm install`
+5. Start command: `npm start`
+6. Add environment variables:
+   ```env
+   NODE_ENV=production
+   PORT=8000
+   MONGODB_URI=your_mongodb_connection_string
+   JWT_SECRET=your_strong_secret_key
+   GEMINI_API_KEY=your_gemini_api_key
+   CORS_ORIGIN=https://invoiceiq.vercel.app
+   ```
+
+### 🗄️ Database
+
+The application uses **MongoDB Atlas** for cloud database hosting. Create a free cluster at [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) and add the connection string to your backend environment variables.
+
+---
 
 ## 🪪 License
 
