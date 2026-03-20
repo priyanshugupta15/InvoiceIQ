@@ -165,14 +165,15 @@ InvoiceIQ/
 │   └── architecture.png
 │
 ├── screenshots/
-│   ├── dashboard.png
-│   ├── create-invoice.png
-│   ├── ai-generated.png
-│   ├── reminder-email.png
-│   └── profile-settings.png
+│   ├── dashboard1.png
+│   ├── createinvoiceai.png
+│   ├── aigeneratedinvoice.png
+│   ├── reminder.png
+│   └── profiles.png
 │
-├── docker-compose.yml
-├── .github/workflows/        # GitHub Actions (optional)
+├── deployment/
+├     ├──Vercel.json- for frontend deployment
+├     ├──render.yaml- for backend deployment
 ├── .env.example              # root example env, if used
 └── README.md
 
@@ -233,8 +234,7 @@ Visit locally:
 
 ### 🌐 Live Demo
 
-- **Frontend (Vercel):** [https://invoiceiq.vercel.app](https://invoiceiq.vercel.app)
-- **Backend API (Render):** [https://invoiceiq-backend.onrender.com](https://invoiceiq-backend.onrender.com)
+https://invoice-iq-self.vercel.app/
 
 ### 📦 Deploy Frontend to Vercel
 
